@@ -1,0 +1,93 @@
+NAME
+    Murex::Config
+
+ABSTRACT
+    Module to handle Murex MxG2000 Configurations
+
+SYNOPSIS
+    use Murex::Config
+
+DESCRIPTION
+    Module to handle Murex MxG2000 Configurations
+
+  EXPORT
+    None by default.
+
+  LOGGING
+    This module expects a log.conf file to exist. This file contains the
+    Log4Perl Configuration.
+
+  Murex::Base->new(basedir=>"./")
+    Creates a new config object. Expects "basedir" to be set to the base
+    directory.
+
+    Example:
+
+       my $configobject = Murex::Config->new(basedir=>"/hfx/home/develop/ml7tre/OOTest/conf/");
+
+  readfile(type=>"csv",filename=>"f.csv")
+    Reads an configuration file and applies it to the object.
+
+    Example:
+
+       $configobject->readfile(type=>"csv",
+                               filename=>"Eod_Schedule.csv",
+                              );
+       $configobject->readfile(type=>"xml",
+                               filename=>"MurexEnv_all.xml",
+                              );
+
+  environmentinfo(name=>$e);
+    Retrieves information about an environment.
+
+    Example:
+
+       my @envs=$configobject->environmentinfo(name=>$e);
+       foreach my $result (@envs) {
+          print Dumper($result);
+       }
+
+  mergeconf("Merged","first.xml","second.xml")
+    Merges two configuration hash's into one. The last one is allowed to
+    overwrite data from the first.
+
+    Example:
+
+       $configobject->mergeconf("MergedXML","MurexEnv_all.xml","MurexEnv_ml7tre.xml");
+
+  encrypt(seed=>"seed",password=>"password")
+    needs two strings as parameters (e.g. seed and password) and returns an
+    encrypted/decrypted value.
+
+    Example:
+
+       $logger->info("Encrypted: ".$configobject->encrypt(seed=>"seed",password=>"password"));
+
+  decrypt(seed=>"seed",password=>"7a29a1a99e53bb2d6c9f77893b017ed6"));
+    needs two strings as parameters (e.g. seed and password) and returns an
+    encrypted/decrypted value.
+
+    Example:
+
+       $logger->info("Decrypted: ".$configobject->decrypt(seed=>"seed",password=>"7a29a1a99e53bb2d6c9f77893b017ed6"));
+
+  getmd5checksum(filename=>"log.conf"));
+    Returns a MD5 checksum for a given filename.
+
+  output(template=>"template.tt",environment=>"envname");
+    Outputs to template toolkit
+
+SEE ALSO
+    Visit the Murex User Group at
+    http://www.linke.de/consulting/murex/usergroup
+
+AUTHOR
+    Markus Linke, <markus.linke@linke.de>.
+
+COPYRIGHT AND LICENSE
+    Copyright 2005 by Markus Linke. All rights reserved. NO commercial use
+    without authors written permission!
+
+AMENDMENT HISTORY
+    Please see Changes file.
+

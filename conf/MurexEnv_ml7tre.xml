@@ -1,0 +1,48 @@
+<Configuration>
+  <Murex>
+    <Env>ml7tre</Env>
+    <Version>2.10.94.4</Version>
+    <Switches>/SPLITSIMUL /NOCASHGAMMA /VAR /NOSNSCALC</Switches>
+    <Sybase>
+      <Server>trdbd25</Server>
+      <Port>9100</Port>
+      <Password>0050009100510056008700570057</Password>
+    </Sybase>
+    <MXMLConfig>
+      <MurexSuperStructureRelease>dev1_2c</MurexSuperStructureRelease>
+    </MXMLConfig>
+    <Maestro>
+      <Batch>RLTEOD01</Batch>
+      <Prefix>ML7</Prefix>
+      <AppServer>trapd25</AppServer>
+      <DbServer>trdbd25</DbServer>
+      <LbServer>trapd26</LbServer>
+    </Maestro>
+    <Services>
+      <fileserver>
+        <Host>trapd25</Host>
+        <Port>32031</Port>
+      </fileserver>
+      <mxmlexchange>
+        <Host>trapd25</Host>
+        <Port>32032</Port>
+        <ExtraParameters>-j:-DSS_ENV=dev1_2c -j:-Dfwss.environment=dev1_2c</ExtraParameters>
+        <ExtraEnvironment>LC_CTYPE=iso_8859_1;export LC_CTYPE;</ExtraEnvironment>
+      </mxmlexchange>
+      <mxdoc>
+        <Host>trapd25</Host>
+        <Port>32033</Port>
+      </mxdoc>
+      <murexnet>
+        <Host>trapd25</Host>
+        <Port>32034</Port>
+      </murexnet>
+    </Services>
+  </Murex>
+  <Sybase>
+    <Server>SMRXD2</Server>
+    <Database>mrx_dev_26</Database>
+    <Username>INSTAL</Username>
+    <Password>4bd234445696beae36fb7dd1ec01c84a</Password>
+  </Sybase>
+</Configuration>

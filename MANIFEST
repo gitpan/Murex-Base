@@ -1,0 +1,17 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+README.html
+t/1.t
+t/2.t
+t/3.t
+lib/Murex/Base.pm
+samples/1.pl
+conf/MurexEnv_all.xml
+conf/MurexEnv_ml7tre.xml
+conf/Reports.csv
+conf/Eod_Schedule.csv
+conf/Murex_Environments.csv
+log.conf
+META.yml                                 Module meta-data (added by MakeMaker)
