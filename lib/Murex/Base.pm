@@ -1,6 +1,6 @@
 =head1 NAME
 
-Murex::Config 
+Murex::Base 
 
 =head1 ABSTRACT
 
@@ -8,7 +8,7 @@ Module to handle Murex MxG2000 Configurations
 
 =head1 SYNOPSIS
 
-use Murex::Config
+use Murex::Base
 
 =head1 DESCRIPTION
 
@@ -22,7 +22,7 @@ None by default.
 
 
 package Murex::Base;
-$VERSION=0.06;
+$VERSION=0.07;
 
 use strict;
 use warnings;
@@ -49,7 +49,7 @@ Creates a new config object. Expects "basedir" to be set to the base directory.
 
 Example:
 
-   my $configobject = Murex::Config->new(basedir=>"/hfx/home/develop/ml7tre/OOTest/conf/");
+   my $configobject = Murex::Base->new(basedir=>"/home/wherever/");
 
 =cut
 
@@ -310,16 +310,16 @@ sub _readfile_xml {
 
 =head1 SEE ALSO
 
-Visit the Murex User Group at http://www.linke.de/consulting/murex/usergroup
+   Visit the Murex User Group at http://www.linke.de/consulting/murex/usergroup
 
 =head1 AUTHOR
 
-Markus Linke, E<lt>markus.linke@linke.deE<gt>.
+   Markus Linke, E<lt>markus.linke@linke.deE<gt>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2005 by Markus Linke. All rights reserved.
-NO commercial use without authors written permission!
+   Copyright 2005 by Markus Linke. All rights reserved.
+   NO commercial use without authors written permission!
 
 =head1 AMENDMENT HISTORY
 

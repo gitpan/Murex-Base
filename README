@@ -1,11 +1,11 @@
 NAME
-    Murex::Config
+    Murex::Base
 
 ABSTRACT
     Module to handle Murex MxG2000 Configurations
 
 SYNOPSIS
-    use Murex::Config
+    use Murex::Base
 
 DESCRIPTION
     Module to handle Murex MxG2000 Configurations
@@ -23,7 +23,7 @@ DESCRIPTION
 
     Example:
 
-       my $configobject = Murex::Config->new(basedir=>"/hfx/home/develop/ml7tre/OOTest/conf/");
+       my $configobject = Murex::Base->new(basedir=>"/home/wherever/");
 
   readfile(type=>"csv",filename=>"f.csv")
     Reads an configuration file and applies it to the object.
@@ -78,15 +78,14 @@ DESCRIPTION
     Outputs to template toolkit
 
 SEE ALSO
-    Visit the Murex User Group at
-    http://www.linke.de/consulting/murex/usergroup
+       Visit the Murex User Group at http://www.linke.de/consulting/murex/usergroup
 
 AUTHOR
-    Markus Linke, <markus.linke@linke.de>.
+       Markus Linke, E<lt>markus.linke@linke.deE<gt>.
 
 COPYRIGHT AND LICENSE
-    Copyright 2005 by Markus Linke. All rights reserved. NO commercial use
-    without authors written permission!
+       Copyright 2005 by Markus Linke. All rights reserved.
+       NO commercial use without authors written permission!
 
 AMENDMENT HISTORY
     Please see Changes file.
